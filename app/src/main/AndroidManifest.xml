@@ -235,5 +235,12 @@
                 <category android:name="android.intent.category.TEST" />
             </intent-filter>
         </activity>
+        <activity android:name="hkcc.ccn3165.javaobject.MainActivity" android:label="Java Object"
+            android:icon="@drawable/fifa19" android:theme="@style/Theme.AppCompat.Light">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.TEST" />
+            </intent-filter>
+        </activity>
     </application>
 </manifest>

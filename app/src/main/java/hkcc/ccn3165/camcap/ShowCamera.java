@@ -6,7 +6,7 @@ import android.hardware.Camera;
 import android.view.SurfaceHolder;
 import android.view.SurfaceView;
 
-import java.io.IOException;
+import static hkcc.ccn3165.camcap.MainActivity.info;
 
 public class ShowCamera extends SurfaceView implements SurfaceHolder.Callback {
     private SurfaceHolder holdMe;
@@ -25,7 +25,8 @@ public class ShowCamera extends SurfaceView implements SurfaceHolder.Callback {
             // theCamera = MainActivity.isCameraAvailiable();
             theCamera.setPreviewDisplay(holder);
             theCamera.startPreview();
-        } catch (IOException e) {
+        } catch (Exception e) {
+            info.setText(e.getMessage());
         }
     }
 

@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="hkcc.ccn3165.intents.Intents">
+
+    <TextView
+        android:id="@+id/TextMain"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="Main Menu (using intents)"
+        android:textColor="#0000FF"
+        android:textSize="24sp" />
+
+    <Button
+        android:id="@+id/ButtonPage2"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/TextMain"
+        android:text="Sub-menu (Page 2)" />
+
+    <Button
+        android:id="@+id/ButtonMarket"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/ButtonPage2"
+        android:text="Play Store" />
+
+    <Button
+        android:id="@+id/ButtonUrl"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/ButtonMarket"
+        android:text="Moodle: http://moodle.cpce-polyu.edu.hk" />
+
+    <Button
+        android:id="@+id/ButtonEmail"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/ButtonUrl"
+        android:text="Email: press@google.com" />
+
+    <Button
+        android:id="@+id/ButtonGMap"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/ButtonEmail"
+        android:text="HKCC (HHB): 22.303342,114.184828" />
+
+    <Button
+        android:id="@+id/ButtonTel"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/ButtonGMap"
+        android:text="Tel: 25 123 123" />
+
+    <Button
+        android:id="@+id/ButtonCamera"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/ButtonTel"
+        android:text="Camera" />
+
+    <Button
+        android:id="@+id/ButtonImage"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/ButtonCamera"
+        android:text="Photo Gallery" />
+
+    <Button
+        android:id="@+id/ButtonPeople"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/ButtonImage"
+        android:text="Contacts" />
+</RelativeLayout>

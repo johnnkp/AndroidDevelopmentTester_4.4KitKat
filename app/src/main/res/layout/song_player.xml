@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="hkcc.ccn3165.songplayer.SongPlayer">
+
+    <TextView
+        android:id="@+id/txtMusic"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:paddingBottom="10dp"
+        android:text="Tap on song name to start playing"
+        android:textSize="20sp" />
+
+    <ImageView
+        android:id="@+id/imgStop"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_below="@+id/txtMusic"
+        android:layout_alignParentLeft="true"
+        android:src="@drawable/stop" />
+
+    <ImageView
+        android:id="@+id/imgPlay"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_alignTop="@+id/imgStop"
+        android:layout_toRightOf="@+id/imgStop"
+        android:src="@drawable/play" />
+
+    <ImageView
+        android:id="@+id/imgPause"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_alignTop="@+id/imgStop"
+        android:layout_toRightOf="@+id/imgPlay"
+        android:src="@drawable/pause" />
+
+    <TextView
+        android:id="@+id/txtSong"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/imgPause"
+        android:layout_alignParentLeft="true"
+        android:text="Songs List："
+        android:textSize="20sp" />
+
+    <!-- Task 1
+    Add three images (prev.png, next.png, and end.png) next to the pause button in activity_main.xml like the layout below: -->
+    <ImageView
+        android:id="@+id/imgPrev"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_alignTop="@+id/imgStop"
+        android:layout_toRightOf="@+id/imgPause"
+        android:src="@drawable/prev" />
+
+    <ImageView
+        android:id="@+id/imgNext"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_alignTop="@+id/imgStop"
+        android:layout_toRightOf="@+id/imgPrev"
+        android:src="@drawable/next" />
+
+    <ImageView
+        android:id="@+id/imgEnd"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_alignTop="@+id/imgStop"
+        android:layout_toRightOf="@+id/imgNext"
+        android:src="@drawable/end" />
+
+    <ListView
+        android:id="@+id/lstMusic"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/txtSong"
+        android:layout_alignParentLeft="true" />
+</RelativeLayout>

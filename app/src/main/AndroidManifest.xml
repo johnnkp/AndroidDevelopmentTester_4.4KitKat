@@ -1,0 +1,239 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright (C) 2008 The Android Open Source Project
+
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+
+          http://www.apache.org/licenses/LICENSE-2.0
+
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+-->
+
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+        package="com.android.development"
+        android:versionCode="1" android:versionName="1.0">
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.DEVICE_POWER" />
+    <uses-permission android:name="android.permission.DUMP" />
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <uses-permission android:name="android.permission.HARDWARE_TEST" />
+    <uses-permission android:name="android.permission.INTERACT_ACROSS_USERS_FULL" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.MANAGE_ACCOUNTS" />
+    <uses-permission android:name="android.permission.REBOOT" />
+    <uses-permission android:name="android.permission.KILL_BACKGROUND_PROCESSES" />
+    <uses-permission android:name="android.permission.SET_ACTIVITY_WATCHER" />
+    <uses-permission android:name="android.permission.SET_ALWAYS_FINISH" />
+    <uses-permission android:name="android.permission.SET_ANIMATION_SCALE" />
+    <uses-permission android:name="android.permission.SET_DEBUG_APP" />
+    <uses-permission android:name="android.permission.SET_PREFERRED_APPLICATIONS" />
+    <uses-permission android:name="android.permission.SET_PROCESS_LIMIT" />
+    <uses-permission android:name="android.permission.USE_CREDENTIALS" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.WRITE_SETTINGS" />
+    <uses-permission android:name="com.google.android.googleapps.permission.ACCESS_GOOGLE_PASSWORD" />
+    <uses-permission android:name="com.google.android.googleapps.permission.GOOGLE_AUTH" />
+    <uses-permission android:name="com.google.android.googleapps.permission.GOOGLE_AUTH.ALL_SERVICES" />
+    <uses-permission android:name="com.google.android.googleapps.permission.GOOGLE_AUTH.YouTubeUser" />
+
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_LOCATION_EXTRA_COMMANDS" />
+    <uses-permission android:name="android.permission.CAMERA"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-feature android:name="android.hardware.camera" />
+    <uses-feature android:name="android.hardware.camera.autofocus" />
+
+    <application android:label="Dev Tools"
+            android:icon="@mipmap/ic_launcher_devtools">
+
+        <uses-library android:name="android.test.runner" />
+
+        <activity android:name="Development" android:label="Dev Tools"
+            android:icon="@mipmap/ic_launcher_devtools">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name="hkcc.ccn3165.deprecatedclock.DeprecatedClock" android:label="Deprecated Clock"
+            android:icon="@drawable/ic_digital_clock">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.TEST" />
+            </intent-filter>
+        </activity>
+        <activity android:name="hkcc.ccn3165.hideclock.HideClock" android:label="Hide Clock"
+            android:icon="@drawable/ios10_clock_app_icon">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.TEST" />
+            </intent-filter>
+        </activity>
+        <activity android:name="hkcc.ccn3165.temperature.Temperature" android:label="Responsive UI"
+            android:icon="@drawable/ic_temp" android:theme="@style/Theme.AppCompat.Light">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.TEST" />
+            </intent-filter>
+        </activity>
+        <activity android:name="hkcc.ccn3165.courseinfo.welcome"
+            android:label="ListView" android:icon="@drawable/ic_view_list_black_24dp">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.TEST" />
+            </intent-filter>
+        </activity>
+        <activity android:name="hkcc.ccn3165.courseinfo.menu"
+            android:label="Course Info CCN 3165">
+        </activity>
+        <activity
+            android:name="hkcc.ccn3165.vibrate.VibrateMode"
+            android:label="Vibrate Mode" android:icon="@drawable/vibratemode">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.TEST" />
+            </intent-filter>
+        </activity>
+        <receiver
+            android:name="hkcc.ccn3165.vibrate.AppWidget"
+            android:icon="@drawable/vibratemode"
+            android:label="Vibrate Mode">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+            </intent-filter>
+            <meta-data
+                android:name="android.appwidget.provider"
+                android:resource="@xml/widget_provider" />
+        </receiver>
+        <service android:name="hkcc.ccn3165.vibrate.AppWidget$ToggleService" />
+        <activity
+            android:name="hkcc.ccn3165.thermometer.Thermometer"
+            android:label="Thermometer">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.TEST" />
+            </intent-filter>
+        </activity>
+        <activity android:name="hkcc.ccn3165.buttonlistener.ButtonListener" android:label="Button Listener"
+            android:icon="@drawable/cup_stack" android:theme="@style/Theme.AppCompat.Light">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.TEST" />
+            </intent-filter>
+        </activity>
+        <activity android:name="hkcc.ccn3165.intents.Intents" android:label="Intents"
+            android:icon="@drawable/ic_launcher" android:theme="@style/Theme.AppCompat.Light">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.TEST" />
+            </intent-filter>
+        </activity>
+        <activity android:name="hkcc.ccn3165.intents.Second" android:theme="@style/Theme.AppCompat.Light"/>
+        <activity android:name="hkcc.ccn3165.httpimagesolution.AndroidImageView" android:label="HTTPS Image Solution"
+            android:icon="@drawable/ic_image_black_24dp" android:theme="@style/Theme.AppCompat.Light">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.TEST" />
+            </intent-filter>
+        </activity>
+        <activity android:name="hkcc.ccn3165.httpimagesolution.HTTPImageSolution" android:theme="@style/Theme.AppCompat.Light"/>
+        <activity android:name="hkcc.ccn3165.sensor.Sensing" android:label="Sensor" android:screenOrientation="portrait"
+            android:icon="@drawable/ic_sensor" android:theme="@style/Theme.AppCompat.Light">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.TEST" />
+            </intent-filter>
+        </activity>
+        <activity android:name="hkcc.ccn3165.gpsdemo.GPSlocation" android:label="Location" android:screenOrientation="portrait"
+            android:icon="@drawable/gps_icon" android:theme="@style/Theme.AppCompat.Light">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.TEST" />
+            </intent-filter>
+        </activity>
+        <!--
+             The API key for Google Maps-based APIs is defined as a string resource.
+             (See the file "res/values/google_maps_api.xml").
+             Note that the API key is linked to the encryption key used to sign the APK.
+             You need a different API key for each encryption key, including the release key that is used to
+             sign the APK for publishing.
+             You can define the keys for the debug and release targets in src/debug/ and src/release/.
+        -->
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="google_maps_api" />
+        <activity android:name="hkcc.ccn3165.maphhb.MapsActivity" android:label="Map"
+            android:icon="@drawable/my_maps" android:theme="@style/Theme.AppCompat.Light">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.TEST" />
+            </intent-filter>
+        </activity>
+        <activity android:name="hkcc.ccn3165.songplayer.SongPlayer" android:label="Song Player"
+            android:icon="@drawable/player" android:theme="@style/Theme.AppCompat.Light">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.TEST" />
+            </intent-filter>
+        </activity>
+        <activity android:name="hkcc.ccn3165.soundpooldemo.SoundPoolDemo" android:label="SoundPool"
+            android:icon="@drawable/soundpool">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.TEST" />
+            </intent-filter>
+        </activity>
+        <activity android:name="hkcc.ccn3165.sqliteoperations.SQLiteOperations" android:label="SQLite Operations"
+            android:icon="@drawable/sql_access" android:theme="@style/Theme.AppCompat.Light">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.TEST" />
+            </intent-filter>
+        </activity>
+        <activity android:name="hkcc.ccn3165.webview.WebViewDemo" android:label="WebView"
+            android:icon="@drawable/webview">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.TEST" />
+            </intent-filter>
+        </activity>
+        <activity android:name="hkcc.ccn3165.vectorimage.MainActivity" android:label="Vector Image"
+            android:icon="@drawable/ic_svglogo" android:theme="@style/Theme.AppCompat.Light">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.TEST" />
+            </intent-filter>
+        </activity>
+        <activity android:name="hkcc.ccn3165.progressdialog.MainActivity" android:label="ProgressDialog"
+            android:icon="@drawable/progress">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.TEST" />
+            </intent-filter>
+        </activity>
+        <activity android:name="hkcc.ccn3165.camcap.MainActivity" android:label="CamCap"
+            android:icon="@drawable/camera" android:theme="@style/Theme.AppCompat.Light">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.TEST" />
+            </intent-filter>
+        </activity>
+        <activity android:name="hkcc.ccn3165.azureface.MainActivity" android:label="Image File"
+            android:icon="@drawable/mtr_ok">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.TEST" />
+            </intent-filter>
+        </activity>
+    </application>
+</manifest>

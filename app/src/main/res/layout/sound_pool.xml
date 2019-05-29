@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="hkcc.ccn3165.soundpooldemo.SoundPoolDemo">
+
+    <Button
+        android:id="@+id/button_destroy"
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="40dp"
+        android:layout_marginLeft="40dp"
+        android:layout_marginTop="54dp"
+        android:onClick="playSoundDestroy"
+        android:text="Destroy" />
+
+    <Button
+        android:id="@+id/button_gun"
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/button_destroy"
+        android:layout_marginStart="74dp"
+        android:layout_marginLeft="74dp"
+        android:layout_toEndOf="@+id/button_destroy"
+        android:layout_toRightOf="@+id/button_destroy"
+        android:onClick="playSoundGun"
+        android:text="Gun" />
+</RelativeLayout>

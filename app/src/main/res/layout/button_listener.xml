@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/TableLayout1"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="hkcc.ccn3165.buttonlistener.ButtonListener">
+
+    <TableRow android:gravity="center">
+
+        <Button
+            android:id="@+id/btnN1"
+            android:background="@android:color/holo_red_light"
+            android:text="Button 1" />
+    </TableRow>
+
+    <TableRow android:gravity="center">
+
+        <Button
+            android:id="@+id/btnN2"
+            android:background="#ffff921a"
+            android:text="Button 2" />
+
+        <Button
+            android:id="@+id/btnN3"
+            android:text="Button 3" />
+    </TableRow>
+
+    <TableRow android:gravity="center">
+
+        <Button
+            android:id="@+id/btnN4"
+            android:text="Button 4" />
+
+        <Button
+            android:id="@+id/btnN5"
+            android:background="@android:color/transparent"
+            android:text="Button 5" />
+
+        <Button
+            android:id="@+id/btnN6"
+            android:text="Button 6" />
+    </TableRow>
+</TableLayout>

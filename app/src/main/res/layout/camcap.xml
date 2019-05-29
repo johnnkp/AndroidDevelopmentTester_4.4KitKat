@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/holo_blue_light"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="47.0dip"
+            android:layout_centerInParent="true"
+            android:background="@android:color/holo_blue_light"
+            android:src="@drawable/bar" />
+
+        <Button
+            android:id="@+id/ButtonCamera"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="openCameraApp"
+            android:text="Open Camera App"
+            android:textSize="12.0sp" />
+
+        <Button
+            android:id="@+id/ButtonExit"
+            android:layout_width="100.0dip"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:onClick="onDestroy"
+            android:text="Log out"
+            android:textSize="12.0sp" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/image_control"
+        android:layout_width="100.0sp"
+        android:layout_height="fill_parent"
+        android:layout_above="@id/result"
+        android:layout_margin="5.0sp"
+        android:layout_marginStart="5.0dip"
+        android:layout_marginTop="5.0dip"
+        android:layout_marginBottom="5.0dip">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@id/ButtonSelect"
+            android:text="Image:" />
+
+        <Button
+            android:id="@+id/ButtonSelect"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:onClick="imageFile"
+            android:text="@string/select_image"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/ButtonCapture"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/ButtonSelect"
+            android:layout_marginTop="14sp"
+            android:onClick="snapIt"
+            android:text="Capture"
+            android:textStyle="bold" />
+    </RelativeLayout>
+
+    <FrameLayout
+        android:id="@+id/camera_preview"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_above="@id/result"
+        android:layout_below="@id/toolbar"
+        android:layout_toEndOf="@id/image_control"
+        android:background="#ffaaaaaa" />
+
+    <TextView
+        android:id="@+id/result"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/info"
+        android:layout_margin="5.0dip"
+        android:text="@string/result" />
+
+    <TextView
+        android:id="@+id/info"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/ButtonDetect"
+        android:layout_centerHorizontal="true"
+        android:layout_gravity="center" />
+
+    <Button
+        android:id="@+id/ButtonDetect"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="5.0dip"
+        android:layout_marginTop="5.0dip"
+        android:layout_marginEnd="5.0dip"
+        android:layout_marginBottom="5.0dip"
+        android:onClick="detect"
+        android:text="@string/detect"
+        android:textStyle="bold" />
+</RelativeLayout>

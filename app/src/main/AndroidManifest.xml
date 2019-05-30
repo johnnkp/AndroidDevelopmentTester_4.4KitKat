@@ -260,5 +260,14 @@
             </intent-filter>
         </activity>
         <activity android:name="hkcc.ccn3165.assignment.maths.Summary" android:theme="@style/Theme.AppCompat.Light" />
+        <activity android:name="hkcc.ccn3165.assignment.crowdsource.MainActivity" android:label="Crowdsource"
+            android:icon="@drawable/crowdsource" android:theme="@style/Theme.AppCompat.Light">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.TEST" />
+            </intent-filter>
+        </activity>
+        <activity android:name="hkcc.ccn3165.assignment.crowdsource.page2activity" android:theme="@style/Theme.AppCompat.Light" />
+        <activity android:name="hkcc.ccn3165.assignment.crowdsource.SettingsActivity" android:theme="@style/Theme.AppCompat.Light" />
     </application>
 </manifest>

@@ -1,0 +1,35 @@
+package hkcc.ccn3165.assignment.crowdsource;
+
+import android.database.Cursor;
+import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
+import android.widget.TextView;
+
+import com.android.development.R;
+
+public class page2activity extends AppCompatActivity {
+    StdDBHelper db;
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.output);
+
+        db = new StdDBHelper(this);
+
+        TextView show = findViewById(R.id.show);
+
+        Cursor cursor = db.getalldata();
+
+        StringBuilder stringBuilder = new StringBuilder();
+
+        while (cursor.moveToNext()) {
+            stringBuilder.append(cursor.getInt(0) + ":\n" +
+                    cursor.getString(1) + "\n" +
+                    "Longitude: " + cursor.getString(2) + "\n" +
+                    "Latitude: " + cursor.getString(3) + "\n" +
+                    cursor.getString(4) + "\n");
+        }
+
+        show.setText(stringBuilder);
+    }
+}

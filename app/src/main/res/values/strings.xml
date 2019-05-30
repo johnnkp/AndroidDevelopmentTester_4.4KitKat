@@ -271,4 +271,12 @@
     <string name="detect">Detect</string>
 
     <string name="make_call">Call Dr. X now</string>
+
+    <string name="wifi_off_on_exit_title">"WiFi off on Exit"</string>
+    <string name="wifi_off_on_exit_key" translatable="false">"wifi_off_on_exit"</string>
+    <bool name="wifi_off_on_exit_default" translatable="false">false</bool>
+
+    <string name="gps_off_on_exit_title">"GPS off on Exit"</string>
+    <string name="gps_off_on_exit_key" translatable="false">"gps_off_on_exit"</string>
+    <bool name="gps_off_on_exit_default" translatable="false">false</bool>
 </resources>

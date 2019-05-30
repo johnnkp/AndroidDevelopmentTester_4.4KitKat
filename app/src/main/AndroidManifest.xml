@@ -251,5 +251,14 @@
                 <category android:name="android.intent.category.TEST" />
             </intent-filter>
         </activity>
+        <!-- https://github.com/ResurrectionRemix/android_packages_apps_ExactCalculator_Pie/blob/pie/res/mipmap-xxxhdpi/ic_launcher_calculator.png -->
+        <activity android:name="hkcc.ccn3165.assignment.maths.MainActivity" android:label="Maths Question" android:screenOrientation="portrait"
+            android:icon="@drawable/resurrection_remix_icon" android:theme="@style/Theme.AppCompat.Light">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.TEST" />
+            </intent-filter>
+        </activity>
+        <activity android:name="hkcc.ccn3165.assignment.maths.Summary" android:theme="@style/Theme.AppCompat.Light" />
     </application>
 </manifest>

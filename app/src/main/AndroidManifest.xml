@@ -52,6 +52,8 @@
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
     <uses-feature android:name="android.hardware.camera" />
     <uses-feature android:name="android.hardware.camera.autofocus" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
 
     <application android:label="Dev Tools"
             android:icon="@mipmap/ic_launcher_devtools">
@@ -237,6 +239,13 @@
         </activity>
         <activity android:name="hkcc.ccn3165.javaobject.MainActivity" android:label="Java Object"
             android:icon="@drawable/fifa19" android:theme="@style/Theme.AppCompat.Light">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.TEST" />
+            </intent-filter>
+        </activity>
+        <activity android:name="hkcc.ccn3165.phonecalls.MainActivity" android:label="Direct Phone Call"
+            android:icon="@drawable/ic_phone_forwarded_black_24dp">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.TEST" />

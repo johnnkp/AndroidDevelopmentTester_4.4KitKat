@@ -269,4 +269,6 @@
     <string name="select_image">"Select\nImage"</string>
     <string name="result">Result:</string>
     <string name="detect">Detect</string>
+
+    <string name="make_call">Call Dr. X now</string>
 </resources>

@@ -279,4 +279,11 @@
     <string name="gps_off_on_exit_title">"GPS off on Exit"</string>
     <string name="gps_off_on_exit_key" translatable="false">"gps_off_on_exit"</string>
     <bool name="gps_off_on_exit_default" translatable="false">false</bool>
+
+    <string name="calc">Calculate</string>
+    <string name="credit">Credits</string>
+    <string name="dialog_title">Learning</string>
+    <string name="dialog_msg">It is a learning experience.</string>
+    <string name="recalculate">Recalculate</string>
+    <string name="reference">Reference</string>
 </resources>

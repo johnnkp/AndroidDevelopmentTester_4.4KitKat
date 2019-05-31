@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="hkcc.ccn3165.stampdutycalc.MainActivity">
+
+    <EditText
+        android:id="@+id/tPropertyValue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="25dp"
+        android:layout_marginTop="30dp"
+        android:ems="10"
+        android:inputType="numberDecimal|numberSigned">
+
+        <requestFocus />
+    </EditText>
+
+    <Button
+        android:id="@+id/bCalculate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/tPropertyValue"
+        android:layout_below="@+id/tPropertyValue"
+        android:layout_marginTop="20dp"
+        android:onClick="calculate"
+        android:text="@string/calc" />
+
+    <Button
+        android:id="@+id/bCredit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/tPropertyValue"
+        android:layout_below="@+id/tPropertyValue"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="100dp"
+        android:onClick="openDialog"
+        android:text="@string/credit" />
+
+    <TextView
+        android:id="@+id/tResult"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/bCalculate"
+        android:layout_below="@+id/bCalculate"
+        android:layout_marginTop="25dp"
+        android:text="" />
+
+    <TextView
+        android:id="@+id/tRule"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/bCalculate"
+        android:layout_below="@+id/tResult"
+        android:layout_marginTop="25dp"
+        android:text="" />
+</RelativeLayout>

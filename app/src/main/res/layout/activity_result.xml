@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="hkcc.ccn3165.stampdutycalc.ResultActivity">
+
+    <TextView
+        android:id="@+id/tResult"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
+        android:text="tResult" />
+
+    <TextView
+        android:id="@+id/tRule"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/tResult"
+        android:layout_below="@+id/tResult"
+        android:layout_marginTop="15dp"
+        android:text="tRule" />
+
+    <Button
+        android:id="@+id/bBack"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/tRule"
+        android:layout_below="@+id/tRule"
+        android:layout_marginTop="25dp"
+        android:onClick="recalculate"
+        android:text="@string/recalculate" />
+
+    <Button
+        android:id="@+id/bReference"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/bBack"
+        android:layout_marginLeft="20dp"
+        android:layout_toRightOf="@+id/bBack"
+        android:onClick="reference"
+        android:text="@string/reference" />
+</RelativeLayout>

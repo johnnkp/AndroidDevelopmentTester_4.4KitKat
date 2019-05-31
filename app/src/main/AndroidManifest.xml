@@ -269,5 +269,14 @@
         </activity>
         <activity android:name="hkcc.ccn3165.assignment.crowdsource.page2activity" android:theme="@style/Theme.AppCompat.Light" />
         <activity android:name="hkcc.ccn3165.assignment.crowdsource.SettingsActivity" android:theme="@style/Theme.AppCompat.Light" />
+        <activity android:name="hkcc.ccn3165.stampdutycalc.MainActivity" android:label="Stamp Duty Calculator"
+            android:icon="@drawable/inland_revenue_department" android:theme="@style/Theme.AppCompat.Light">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.TEST" />
+            </intent-filter>
+        </activity>
+        <activity android:name="hkcc.ccn3165.stampdutycalc.ResultActivity" android:theme="@style/Theme.AppCompat.Light"/>
+        <activity android:name="hkcc.ccn3165.stampdutycalc.WebviewActivity" android:theme="@style/Theme.AppCompat.Light"></activity>
     </application>
 </manifest>

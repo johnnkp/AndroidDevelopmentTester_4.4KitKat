@@ -293,4 +293,6 @@
     <string name="start_note">Send a notification</string>
     <string name="cancel_note">Cancel the notification</string>
     <string name="update_note">Update the notification</string>
+
+    <string name="send_email">Sending an email</string>
 </resources>

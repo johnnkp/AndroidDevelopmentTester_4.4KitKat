@@ -308,5 +308,12 @@
             <meta-data android:name="android.support.PARENT_ACTIVITY"
                 android:value="hkcc.ccn3165.notificationdemo.MainActivity"/>
         </activity>
+        <activity android:name="hkcc.ccn3165.sendemail.SendEmail" android:label="Send Email"
+            android:icon="@drawable/ic_mail_outline_black_24dp">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.TEST" />
+            </intent-filter>
+        </activity>
     </application>
 </manifest>

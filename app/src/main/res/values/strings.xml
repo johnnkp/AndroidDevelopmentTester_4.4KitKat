@@ -295,4 +295,8 @@
     <string name="update_note">Update the notification</string>
 
     <string name="send_email">Sending an email</string>
+
+    <string name="phone_label">The phone number:</string>
+    <string name="sms_label">SMS message:</string>
+    <string name="send_sms_label">Send now!</string>
 </resources>

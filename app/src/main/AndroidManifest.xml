@@ -54,6 +54,7 @@
     <uses-feature android:name="android.hardware.camera.autofocus" />
     <uses-permission android:name="android.permission.CALL_PHONE" />
     <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.SEND_SMS" />
 
     <application android:label="Dev Tools"
             android:icon="@mipmap/ic_launcher_devtools">
@@ -310,6 +311,13 @@
         </activity>
         <activity android:name="hkcc.ccn3165.sendemail.SendEmail" android:label="Send Email"
             android:icon="@drawable/ic_mail_outline_black_24dp">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.TEST" />
+            </intent-filter>
+        </activity>
+        <activity android:name="hkcc.ccn3165.sendsms.SendSMS" android:label="Send SMS"
+            android:icon="@drawable/messenger2">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.TEST" />

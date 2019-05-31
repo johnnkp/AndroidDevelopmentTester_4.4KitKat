@@ -286,5 +286,12 @@
             </intent-filter>
         </activity>
         <activity android:name="hkcc.ccn3165.advancelistview.DetailActivity" android:theme="@style/Theme.AppCompat.Light"/>
+        <activity android:name="hkcc.ccn3165.servicedemo.MainActivity" android:label="Service Demo">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.TEST" />
+            </intent-filter>
+        </activity>
+        <service android:name="hkcc.ccn3165.servicedemo.ServiceDemo" />
     </application>
 </manifest>

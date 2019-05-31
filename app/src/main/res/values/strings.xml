@@ -286,4 +286,7 @@
     <string name="dialog_msg">It is a learning experience.</string>
     <string name="recalculate">Recalculate</string>
     <string name="reference">Reference</string>
+
+    <string name="stop_service">To stop a Service</string>
+    <string name="start_service">To start a Service</string>
 </resources>

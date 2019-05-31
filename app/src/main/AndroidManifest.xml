@@ -293,5 +293,20 @@
             </intent-filter>
         </activity>
         <service android:name="hkcc.ccn3165.servicedemo.ServiceDemo" />
+        <activity android:name="hkcc.ccn3165.notificationdemo.MainActivity" android:label="Notification Demo"
+            android:icon="@drawable/notification">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.TEST" />
+            </intent-filter>
+        </activity>
+        <!-- Added for Notification Events -->
+        <activity android:name="hkcc.ccn3165.notificationdemo.NotificationView"
+            android:label="Details of notification"
+            android:theme="@style/Theme.AppCompat.Light"
+            android:parentActivityName="hkcc.ccn3165.notificationdemo.MainActivity">
+            <meta-data android:name="android.support.PARENT_ACTIVITY"
+                android:value="hkcc.ccn3165.notificationdemo.MainActivity"/>
+        </activity>
     </application>
 </manifest>
